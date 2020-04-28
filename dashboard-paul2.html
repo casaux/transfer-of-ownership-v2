@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>myCASA</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="initial-scale=1">
+      <link rel="stylesheet" href="../mycasa-src/css/furnace.min.css">
+      <link rel="stylesheet" href="../mycasa-src/css/casa.css">
+      <script type="text/javascript" src="../mycasa-src/js/furnace.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src/js/jquery.js"></script>
+	   
+	   <style type="text/css">
+	   
+		   .casa-input-table .row div, .casa-input-table .header-row{
+			    padding-top:.5rem;
+			   padding-bottom:.5rem;
+		   }
+		   
+		   .casa-input-table .row .au-control-input{
+			   display:block;
+		   }
+		   
+		   /*
+		   
+		     .casa-input-table .row .au-control-input{
+		  	 opacity:0.5;
+		   	}
+		   			   
+
+		   
+		    .casa-input-table .header .au-control-input{
+			   opacity:1;
+		   }
+		   
+		   */
+		   
+		   
+	   </style>
+	   
+	   
+      <script type="text/javascript">
+         /* page specific js */
+         
+         
+         $( document ).ready(function() {
+         
+         function checkDisabled(){
+			 
+			 var checked =  $('input:checked').length;
+			 
+			if(checked>0){
+				 $("a").attr("disabled", false);
+			} else {
+				 $("a").attr("disabled", true);
+			}
+			 
+			 
+			
+			 
+		 }
+			 
+			$("#rec input").bind('click', function() {
+				checkDisabled();
+			});
+			 
+			 
+			 $("#rec-all").bind('click', function() {
+				 
+				 if($(this).is(":checked")){
+					  $("#rec input").prop('checked',$(this).is(":checked"));
+					 
+					 checkDisabled();
+
+
+					 
+				 } else {
+					  $("#rec input").prop('checked',$(this).is(":checked"));
+					 checkDisabled();
+					 
+				 }
+
+				 
+			 });
+			 
+			  $("#com-all").bind('click', function() {
+				 
+				 if($(this).is(":checked")){
+					  $("#com input").prop('checked',$(this).is(":checked"));
+					 
+					   checkDisabled();
+					 
+				 } else {
+					  $("#com input").prop('checked',$(this).is(":checked"));
+					 checkDisabled();
+				 }
+
+				 
+			 });
+			 
+			 
+			 
+         
+         });
+         
+         
+         
+         
+      </script>
+   </head>
+   <body class="live-demo au-body au-grid">
+      <main class="au-grid">
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="logo au-body au-body--dark">
+                     <a href="index.html"><img src="../mycasa-src/img/CASALOGO-white-i.svg"></a>
+                  </div>
+                  <div class="casa-menu">
+                  
+                  	<div id="dropdown-menu">
+						<div id="dd-menu"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/menu.png" height="20" />Menu</a></div>
+						<div id="dd-close"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/close.png" height="20" />Close</a><br />
+						<br />
+						<p id="mycasa-home"><a href="#">myCASA home</a></p>
+						<p><a href="signed-out-4.html">Sign out</a></p>
+						</div>
+                  
+                  
+                  </div>
+               </div></div>
+            </div>
+         </div>
+         <div class="body">
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+         <div class="body">
+            <div class="container">
+               <!--nav class="au-breadcrumbs" aria-label="breadcrumb">
+                  <ul class="au-link-list au-link-list--inline">
+                     <li><a href="welcome.html">myCASA</a></li>
+                     <li><abbr title="Aviation reference number">ARN</abbr> application</li>
+                  </ul>
+               </nav-->
+              
+               <header class="au-header" role="banner">
+                  <h1 class="break desktop au-header-heading">Welcome to myCASA</span>
+                  </h1>
+               </header>
+			 
+			 <div class="row">
+			
+			
+			 <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-profile"></div>
+			  		<h2><a href="#">Profile</a></h2>
+			  		Paul Edwards<br />
+			  		ARN: 1548273
+			  	</div>
+			  </div>
+			  
+			  <!--
+			  
+			  <div class="col-xs-4">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-reoc"></div>
+			  		<h2><a href="#">RPA Operator's Certificate (ReOC)</a></h2>
+			  		Expiry date: 31 Feb 2019
+			  	</div>
+			  </div>
+			  
+			  -->
+			  
+
+				
+			  <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-licences"></div>
+			  		<h2><a href="#">Licences and accreditation</a></h2>
+					Become an accredited RPA operator
+			  	</div>
+			  </div>
+			  
+
+
+
+			  
+			  <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-rpa"></div>
+			  		<h2><a href="#">Drones and <abbr title="Remotely piloted aircraft">RPA</abbr></a></h2>
+			  		0 registered drones and <abbr title="Remotely piloted aircraft">RPA</abbr>s
+			  	</div>
+			  </div>
+			  
+
+				 
+			  
+			  <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-applications"></div>
+			  		<h2><a href="applications-paul2.html">Applications</a></h2>
+					2 completed applications
+			  	</div>
+			  </div>
+			  
+			  <!--
+			</div>
+			
+			
+			
+			<h2>Services and new applications</h2>
+			<br />
+			<div class="row">
+
+			
+			 <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-drones"></div>
+			  		<h2><a href="#">Drones and <abbr title="Remotely Piloted Aircraft">RPA</abbr> registration</a></h2>
+			  		Register drones and RPA
+			  	</div>
+			  </div>
+			  
+			   <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-reoc"></div>
+			  		<h2><a href="#"><abbr title="Remotely Piloted Aircraft Operator's Certificates">ReOC</abbr></a></h2>
+			  		Apply for a <abbr title="Remotely Piloted Aircraft">RPA</abbr> Operator's Certificates (ReOC)
+			  	</div>
+			  </div>
+						  <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-aircraft"></div>
+			  		<h2><a href="#">Aircraft registration</a></h2>
+			  		Register aircraft
+			  	</div>
+			  </div>
+			
+			
+			   <div class="col-lg-4 col-xs-12">
+			  	<div class="casa-dashboard-item">
+			  		<div class="icon icon-vh"></div>
+			  		<h2><a href="#"><abbr title="">VH mark</abbr></a></h2>
+			  		Apply for a VH registration mark
+			  	</div>
+			  </div>
+			
+			-->
+			
+			
+			 
+			 </div>
+			 
+			 
+			 
+			 
+			</div>
+			
+		</div>	
+	</div>
+	
+          <div class="footer">
+           
+            <div class="footer-wrapper">
+               <iframe src="../mycasa-src/footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+            </div>
+         </div>
+      </main>
+   </body>
+</html>

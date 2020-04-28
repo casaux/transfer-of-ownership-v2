@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>myCASA</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="initial-scale=1">
+      <link rel="stylesheet" href="../mycasa-src/css/furnace.min.css">
+      <link rel="stylesheet" href="../mycasa-src/css/casa.css">
+      <script type="text/javascript" src="../mycasa-src/js/furnace.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src/js/jquery.js"></script>
+	   
+	   <style type="text/css">
+	   
+		   .casa-input-table .row div, .casa-input-table .header-row{
+			    padding-top:.5rem;
+			   padding-bottom:.5rem;
+		   }
+		   
+		   .casa-input-table .row .au-control-input{
+			   display:block;
+		   }
+		   
+		   /*
+		   
+		     .casa-input-table .row .au-control-input{
+		  	 opacity:0.5;
+		   	}
+		   			   
+
+		   
+		    .casa-input-table .header .au-control-input{
+			   opacity:1;
+		   }
+		   
+		   */
+		   
+		   
+	   </style>
+	   
+	   
+      <script type="text/javascript">
+         /* page specific js */
+         
+         
+         $( document ).ready(function() {
+         
+         function checkDisabled(){
+			 
+			 var checked =  $('input:checked').length;
+			 
+			if(checked>0){
+				 $("a").attr("disabled", false);
+			} else {
+				 $("a").attr("disabled", true);
+			}
+			 
+			 
+			
+			 
+		 }
+			 
+			$("#rec input").bind('click', function() {
+				checkDisabled();
+			});
+			 
+			 
+			 $("#rec-all").bind('click', function() {
+				 
+				 if($(this).is(":checked")){
+					  $("#rec input").prop('checked',$(this).is(":checked"));
+					 
+					 checkDisabled();
+
+
+					 
+				 } else {
+					  $("#rec input").prop('checked',$(this).is(":checked"));
+					 checkDisabled();
+					 
+				 }
+
+				 
+			 });
+			 
+			  $("#com-all").bind('click', function() {
+				 
+				 if($(this).is(":checked")){
+					  $("#com input").prop('checked',$(this).is(":checked"));
+					 
+					   checkDisabled();
+					 
+				 } else {
+					  $("#com input").prop('checked',$(this).is(":checked"));
+					 checkDisabled();
+				 }
+
+				 
+			 });
+			 
+			 
+			 
+         
+         });
+         
+         
+         
+         
+      </script>
+   </head>
+   <body class="live-demo au-body au-grid">
+      <main class="au-grid">
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="logo au-body au-body--dark">
+                     <a href="index.html"><img src="../mycasa-src/img/CASALOGO-white-i.svg"></a>
+                  </div>
+                  <div class="casa-menu">
+                  
+                  	<div id="dropdown-menu">
+						<div id="dd-menu"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/menu.png" height="20" />Menu</a></div>
+						<div id="dd-close"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/close.png" height="20" />Close</a><br />
+						<br />
+						<p id="mycasa-home"><a href="#">myCASA home</a></p>
+						<p><a href="#">Switch profile</a></p>
+						<p><a href="mycasa-signed-out.html">Sign out</a></p>
+						</div>
+                  
+                  
+                  </div>
+               </div></div>
+            </div>
+         </div>
+         <div class="body">
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+            <div class="container">
+               <nav class="au-breadcrumbs" aria-label="breadcrumb">
+                  <ul class="au-link-list au-link-list--inline">
+                     <li><a href="dashboard-kristen.html">myCASA</a></li>
+                     <li>Aircraft</li>
+                  </ul>
+               </nav>
+               <header class="au-header" role="banner">
+                  <h1 class="break desktop au-header-heading">Aircraft</h1>
+                  <a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a>
+               </header>
+				
+					
+               <div class="row">
+                  <div class="col-xs-12" id="rec">
+                     <div class="detail">
+						 
+						 <div class="casa-input-table">
+						 
+                        <div class=" row header-row">
+                           <div class="col-xs-3">
+                              <abbr title="Remotely piloted aircraft">Aircraft</abbr>
+                           </div>
+                           <div class="col-xs-3">
+                              VH-Mark
+                           </div>
+						<div class="col-xs-3">
+                              Serial Number
+                           </div>
+                        </div>
+                        <div class="row body-row">
+                           <div class="col-xs-3">
+                              <a href="r44.html">Robinson R44</a>
+                           </div>
+                           <div class="col-xs-3" style="word-break: break-all">
+                              VH-ABC
+                           </div>
+						   <div class="col-xs-3" style="word-break: break-all">
+                              888888888888
+                           </div>
+							<div class="col-xs-3">
+                              <a href="r44.html">Manage</a>
+                           </div>
+                        </div>
+                        <div class="row body-row">
+                           <div class="col-xs-3">
+                              <a href="#">Robinson R22</a>
+                           </div>
+                           <div class="col-xs-3" style="word-break: break-all">
+                              VH-XYZ
+                           </div>
+							<div class="col-xs-3" style="word-break: break-all">
+                              777777777777
+                           </div>
+							<div class="col-xs-3">
+                              <a href="#">Manage</a>
+                           </div>
+                        </div>
+						    <div class="row body-row">
+                           <div class="col-xs-3">
+                              <a href="#">Bell 206</a>
+                           </div>
+                           <div class="col-xs-3" style="word-break: break-all">
+                              VH-ZZZ
+                           </div>
+								<div class="col-xs-3" style="word-break: break-all">
+                              666666666666
+                           </div>
+							<div class="col-xs-3">
+                              <a href="#">Manage</a>
+                           </div>
+                        </div>	 
+                        </div>
+                     </div>
+						   </div>
+                  </div>
+
+		   
+<br><br><br>
+               <div class="form-navigation">
+                  <a class="au-direction-link au-direction-link--left" href="dashboard-heliflite.html">Return to myCASA</a>
+               </div>
+            </div>
+         </div>
+         </div>
+          <div class="footer">
+           
+            <div class="footer-wrapper">
+               <iframe src="../mycasa-src/footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+            </div>
+         </div>
+      </main>
+   </body>
+</html>
