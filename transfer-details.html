@@ -109,7 +109,7 @@
 							  <br />
 					
 								<label for="text-input-block2" class="casa-label-guidance">New owner ARN</label>
-				<input class="au-text-input au-text-input--block" name="text-input-block2" id="text-input-block2" type="text" value="">	
+				<input class="au-text-input au-text-input--block" name="text-input-block2" id="new-owner-arn" type="text" value="">	
 					
 					<br>
 
@@ -118,17 +118,15 @@
 			 
 			 <br><br><br>
 				   
-				<div class="form-navigation">
+				<div class="form-navigation" id="navigate">
 
-				<a class="au-btn" href="organisation-verification.html">Next</a>
-					
-
-
-
-
-					
+				<a class="au-btn" href="#">Next</a>
 
 				</div>
+                              
+
+                              
+                              
 				               <hr />
             <a href="arn-saved.html" class="au-btn au-btn--secondary">
             Save and exit application
@@ -137,7 +135,7 @@
             </div>
 			 </div>
 			 </div>
-		  </div>
+
 
 
           <div class="footer">
@@ -147,5 +145,15 @@
             </div>
          </div>
       </main>
+       <script>
+			  $("#navigate a").click(function(){
+      var textValue = $("#new-owner-arn").val();
+      if (textValue == "1234567") {
+        window.location.href="organisation-verification.html";
+      } else {
+        window.location.href="individual-verification.html";
+      }
+ });
+       </script>          
    </body>
 </html>
