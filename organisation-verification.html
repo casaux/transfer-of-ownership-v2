@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>myCASA</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="initial-scale=1">
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/designsystem.min.css">
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/casa.css">
+      <script type="text/javascript" src="../mycasa-src-3.0/js/designsystem.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.js"></script>
+	  <script type="text/javascript" src="va.js"></script> 
+      <script type="text/javascript">
+         /* page specific js */
+         
+         
+      </script>
+   </head>
+   <body class="live-demo au-body au-grid">
+      <main class="au-grid">
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="logo au-body au-body--dark">
+                     <a href="index.html"><img src="../mycasa-src/img/CASALOGO-white-i.svg"></a>
+                  </div>
+                  <div class="casa-menu">
+                  
+                  	<div id="dropdown-menu">
+						<div id="dd-menu"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/menu.png" height="20" />Menu</a></div>
+						<div id="dd-close"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/close.png" height="20" />Close</a><br />
+						<br />
+						<p id="mycasa-home"><a href="#">myCASA home</a></p>
+						<p><a href="#">Switch profile</a></p>
+						<p><a href="mycasa-signed-out.html">Sign out</a></p>
+						</div>
+                  
+                  
+                  </div>
+               </div></div>
+            </div>
+         </div>
+         <div class="body">
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+         <div class="container">
+               <nav class="au-breadcrumbs" aria-label="breadcrumb">
+                  <ul class="au-link-list au-link-list--inline">
+                     <li><a href="dashboard-org.html">myCASA</a></li>
+                      <li><a href="manage-users.html">Manage aircraft</a></li>
+                    <li>Transfer aircraft ownership</li>
+                  </ul>
+               </nav>
+			 <div class="casa-section">
+               <header class="au-header" role="banner">
+                  <h1 class="break desktop au-header-heading">Transfer aircraft ownership</h1>
+                  <a class="au-direction-link" href="javascript:history.back()">
+					<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
+					</a>
+               </header>
+			 </div>
+<div class="row">
+               	<div class="col-xs-12 col-md-12 col-lg-6">
+					<section class="au-callout">					
+					<h4>Organisation details</h4>
+						
+<p><strong>Name:</strong> Hoppers Choppers<br>
+<strong>ARN:</strong> 1078952</p>
+					</section>
+<div class="row">
+                  <div class="col-xs-12 col-lg-6">
+                    <p class="casa-form-descriptor"><strong>You will be transferring the ownership of the aircraft to this organisation. Are these details correct?</strong></p>
+					
+					
+					<div class="au-form-group">     
+                    <fieldset class="au-fieldset">
+                        <legend class="au-fieldset__legend">
+                      
+                        </legend>
+                  
+                    </div>  
+						
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
+  <label class="au-control-input__text" for="phone-radio-block">Yes</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="radio" name="radio-ex" id="tablet-radio-block">
+  <label class="au-control-input__text" for="tablet-radio-block">No</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  
+
+</div>			   
+						
+						
+						
+						
+				<div class="au-form-group">
+
+								<div id="navigate" "navigate2">
+			    <a href="kristen-app-summary.html" class="au-btn au-btn--primary">Next</a>          
+            </div>
+					
+
+
+
+
+					
+
+				</div>
+				               <hr />
+            <a href="arn-saved.html" class="au-btn au-btn--secondary">
+            Save and exit application
+            </a>  
+				   
+            </div>
+			 </div>
+			 </div>
+		  </div>
+
+
+          <div class="footer">
+           
+            <div class="footer-wrapper">
+               <iframe src="../mycasa-src/footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+            </div>
+         </div>
+      </main>
+ <script>
+        $("#navigate a"). click(function(){
+				var radioValue = $("input[name='role-choice']:checked"). val();
+				window.location.href=radioValue+".html";
+			 }); 
+       </script>
+   </body>
+</html>

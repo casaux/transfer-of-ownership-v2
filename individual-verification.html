@@ -5,26 +5,19 @@
       <title>myCASA</title>
       <meta name="viewport" content="width=device-width">
       <meta name="viewport" content="initial-scale=1">
-      <link rel="stylesheet" href="../mycasa-src/css/furnace.min.css">
-      <link rel="stylesheet" href="../mycasa-src/css/casa.css">
-	   
-	   
-	   
-      <script type="text/javascript" src="../mycasa-src/js/furnace.min.js"></script>
-      <script type="text/javascript" src="../mycasa-src/js/jquery.min.js"></script>
-      <script type="text/javascript" src="../mycasa-src/js/jquery.js"></script>
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/designsystem.min.css">
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/casa.css">
+      <script type="text/javascript" src="../mycasa-src-3.0/js/designsystem.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.js"></script>
+	  <script type="text/javascript" src="va.js"></script> 
       <script type="text/javascript">
          /* page specific js */
          
-
-
-		  
-		  
          
       </script>
    </head>
    <body class="live-demo au-body au-grid">
-
       <main class="au-grid">
          <div class="header">
             <div class="container">
@@ -59,68 +52,46 @@
 			</div>
 		</div>
          <div class="container">
-			 <div class="row">
-			 			  <div class="col-lg-6 col-md-6 col-xs-12">
-			
                <nav class="au-breadcrumbs" aria-label="breadcrumb">
                   <ul class="au-link-list au-link-list--inline">
-                     <li><a href="dashboard-kristen.html">myCASA</a></li>
-                     <li><a href="aircraft.html">Aircraft</a></li>
-					  <li><a href="r44.html">Manage aircraft</a></li>
-					  <li>Transfer aircraft ownership</li>
+                     <li><a href="dashboard-org.html">myCASA</a></li>
+                      <li><a href="manage-users.html">Manage aircraft</a></li>
+                    <li>Transfer aircraft ownership</li>
                   </ul>
                </nav>
+			 <div class="casa-section">
                <header class="au-header" role="banner">
                   <h1 class="break desktop au-header-heading">Transfer aircraft ownership</h1>
-                  <a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a>
+                  <a class="au-direction-link" href="javascript:history.back()">
+					<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
+					</a>
                </header>
-			 
-<div class="au-callout">
-					<p>Please note you cannot submit this form without providing the new owners ARN. If the new owner does not have an ARN they will need to <a href="">apply for one</a> before you can complete the transfer.</p>
-					
-					
-							  
-				</div>
-		<br>
-<h2>Transfer details</h2>
-							  <br>
+			 </div>
+<div class="row">
+               	<div class="col-xs-12 col-md-12 col-lg-6">
+					<section class="au-callout">					
+					<h4>New owner details</h4>
+						
+<br>
+<strong>ARN:</strong> 1078952</p>
+					</section>
+					<div class="au-form-group">     
+                    <fieldset class="au-fieldset">
+                        <legend class="au-fieldset__legend">
+                      
+                        </legend>
 
-							  
-							  				<div class="date-entry">
-					<p class="casa-label-guidance">Date of transfer</p>
-				<div class="date date-day">
-					<label for="text-input-block1">Day</label>	
-					<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block1" type="text" value="">
-				</div>	
-				<div class="date date-month">	
-					<label for="text-input-block2">Month</label>	
-					<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block2" type="text" value="">
-					</div>
-				<div class="date date-year">
-					<label for="text-input-block3">Year</label>	
-					<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block3" type="text" value="">
-								
-					</div>
-					<p class="date-guidance">For example, 31 01 2020</p>	
-				</div>
-					<br>  
-			 
-							  
-							  <br />
-					
-								<label for="text-input-block2" class="casa-label-guidance">New owner ARN</label>
-				<input class="au-text-input au-text-input--block" name="text-input-block2" id="text-input-block2" type="text" value="">	
-					
-					<br>
+ <label for="text-input-block1" class="casa-label-guidance">New owner family name</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block3" id="text-input-block3" type="text" value="">
+				 <p class="family-name-guidance"></p>	            
+                  
+                    </div>  
+			   
+				<div class="au-form-group">
 
-			 
-
-			 
-			 <br><br><br>
-				   
-				<div class="form-navigation">
-
-				<a class="au-btn" href="organisation-verification.html">Next</a>
+								<div id="navigate" "navigate2">
+			    <a href="kristen-app-summary-indiv.html" class="au-btn au-btn--primary">Next</a>          
+            </div>
 					
 
 
@@ -147,5 +118,11 @@
             </div>
          </div>
       </main>
+ <script>
+        $("#navigate a"). click(function(){
+				var radioValue = $("input[name='role-choice']:checked"). val();
+				window.location.href=radioValue+".html";
+			 }); 
+       </script>
    </body>
 </html>
